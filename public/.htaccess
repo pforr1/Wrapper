@@ -1,0 +1,15 @@
+# DEV
+#
+# display errors
+php_flag display_errors on
+php_flag display_startup_errors on
+# error reporting php constants are not known in htaccess, apache.conf etc.
+# 2039 = E_ALL & ~E_NOTICE
+# 2047 = E_ALL (includes E_NOTICE since ... xxx)
+# -1 = all messages regardless of which version of PHP you're running
+php_value error_reporting -1
+#
+# and log errors
+php_value log_errors on
+# on Windows absolute path is working
+php_value error_log D:/pforrin/mvo_php_error.log
